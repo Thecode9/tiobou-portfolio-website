@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tiobou Fofou Milton Raille – Software Engineer & Data Engineer</title>
+  <meta name="description" content="Software engineering student and aspiring data engineer from Cameroon, building technology solutions for education and social impact in Africa.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Tiobou Fofou Milton Raille – Portfolio">
+  <meta property="og:description" content="Software engineering student from Bamenda, Cameroon. Focused on data engineering, mobile development, and impactful tech solutions.">
+  <meta property="og:image" content="milton_raille.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ===== OVERRIDE: Clean, engineering-grade professional palette ===== */
+    :root {
+      --bg-main: #ffffff;
+      --bg-surface: #f8fafc;
+      --bg-surface-hover: #f1f5f9;
+      --bg-surface-tint: #f0f4ff;
+
+      /* Deep navy + electric blue — the LinkedIn/GitHub engineer look */
+      --accent-purple: #1d4ed8;
+      --accent-purple-dark: #1e3a8a;
+      --accent-indigo: #2563eb;
+      --accent-magenta: #0891b2;
+
+      --gradient-brand: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+      --gradient-light-tint: linear-gradient(180deg, #ffffff 0%, #f0f4ff 100%);
+      --gradient-glow: radial-gradient(circle, rgba(29,78,216,0.05) 0%, rgba(37,99,235,0.02) 60%, transparent 100%);
+
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      --text-white: #ffffff;
+
+      --border-light: rgba(29,78,216,0.08);
+      --border-focus: rgba(29,78,216,0.35);
+      --shadow-sm: 0 4px 16px rgba(29,78,216,0.04);
+      --shadow-md: 0 10px 30px -10px rgba(29,78,216,0.10), 0 8px 12px -8px rgba(29,78,216,0.06);
+      --shadow-lg: 0 20px 40px -15px rgba(29,78,216,0.14), 0 15px 20px -10px rgba(29,78,216,0.08);
+      --shadow-glow: 0 0 25px rgba(29,78,216,0.18);
+    }
+
+    /* ===== NAV ===== */
+    .site-nav { background: rgba(255,255,255,0.88); }
+    .site-nav.scrolled { background: rgba(255,255,255,0.97); }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 90px;
+      background: linear-gradient(160deg, #ffffff 0%, #f0f4ff 55%, #e8efff 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -120px;
+      right: -120px;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(29,78,216,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      background: rgba(29,78,216,0.08);
+      border: 1px solid rgba(29,78,216,0.15);
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--accent-purple);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-badge span { font-size: 0.7rem; }
+
+    .hero-name {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2.6rem, 6vw, 4rem);
+      font-weight: 800;
+      color: var(--text-primary);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-name .accent { color: var(--accent-purple); }
+
+    .hero-title {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.01em;
+    }
+
+    .hero-intro {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      max-width: 580px;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2.5rem;
+    }
+
+    .stat-item { display: flex; flex-direction: column; }
+    .stat-number {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      line-height: 1;
+    }
+    .stat-label { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem; font-weight: 500; }
+
+    .hero-image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+      width: 300px;
+      height: 360px;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 30px 60px -15px rgba(29,78,216,0.2), 0 0 0 1px rgba(29,78,216,0.1);
+    }
+
+    .hero-image-wrapper::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(29,78,216,0.15) 0%, transparent 50%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    /* floating status badge on image */
+    .hero-status-badge {
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(29,78,216,0.12);
+      border-radius: 12px;
+      padding: 0.6rem 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      white-space: nowrap;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22c55e;
+      animation: pulse-green 2s infinite;
+    }
+
+    @keyframes pulse-green {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(34,197,94,0.4); }
+      50% { box-shadow: 0 0 0 5px rgba(34,197,94,0); }
+    }
+
+    .status-text { font-size: 0.8rem; font-weight: 600; color: var(--text-primary); }
+
+    /* ===== SECTION TITLES ===== */
+    .section-header { margin-bottom: 3.5rem; }
+
+    .section-header h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.025em;
+      display: block;
+    }
+
+    .section-header h2::after { display: none; } /* remove old underline */
+
+    .section-divider {
+      width: 40px;
+      height: 4px;
+      background: var(--gradient-brand);
+      border-radius: 9999px;
+      margin-top: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 520px;
+    }
+
+    /* ===== ABOUT ===== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .about-text p {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--text-secondary);
+      margin-bottom: 1.25rem;
+    }
+
+    .about-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+
+    .highlight-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 1.25rem;
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .highlight-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: rgba(29,78,216,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-purple);
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .highlight-text h4 { font-size: 0.9rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.15rem; }
+    .highlight-text p  { font-size: 0.8rem; color: var(--text-muted); margin: 0; }
+
+    .vision-card {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 20px;
+      padding: 3rem;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .vision-card::before {
+      content: '"';
+      position: absolute;
+      top: -20px;
+      left: 20px;
+      font-size: 10rem;
+      font-family: 'Outfit', sans-serif;
+      color: rgba(29,78,216,0.04);
+      line-height: 1;
+    }
+
+    .vision-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1.25rem;
+      color: var(--accent-purple);
+      font-weight: 700;
+    }
+
+    .vision-card p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--text-primary);
+      font-weight: 500;
+      border-left: 3px solid var(--accent-purple);
+      padding-left: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    /* ===== RESUME SECTION ===== */
+    #resume.section { background: var(--bg-surface); }
+
+    .resume-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .resume-cta-panel {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: var(--shadow-md);
+      text-align: center;
+    }
+
+    .resume-cta-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      background: rgba(29,78,216,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      color: var(--accent-purple);
+      margin: 0 auto 1.5rem;
+    }
+
+    .resume-cta-panel h3 { font-size: 1.3rem; margin-bottom: 0.75rem; }
+    .resume-cta-panel p  { font-size: 0.95rem; margin-bottom: 2rem; }
+
+    .resume-embed {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+
+    .resume-embed embed, .resume-embed iframe {
+      width: 100%;
+      height: 650px;
+      border: none;
+      display: block;
+    }
+
+    /* ===== PROJECTS ===== */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2rem;
+      margin-top: 0;
+    }
+
+    .project-card {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(29,78,216,0.2);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .project-tech-art {
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .p1 { background: linear-gradient(135deg, #f0f4ff 0%, #dbeafe 100%); }
+    .p2 { background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); }
+    .p3 { background: linear-gradient(135deg, #faf5ff 0%, #ede9fe 100%); }
+    .p4 { background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%); }
+    .p5 { background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%); }
+
+    .project-body { padding: 1.75rem; flex-grow: 1; display: flex; flex-direction: column; }
+    .project-body h3 { font-size: 1.15rem; margin-bottom: 0.6rem; color: var(--text-primary); }
+    .project-outcome {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #22c55e;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .project-text { font-size: 0.92rem; line-height: 1.65; color: var(--text-secondary); margin-bottom: 1.25rem; flex-grow: 1; }
+    .project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+    .project-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.65rem;
+      border-radius: 6px;
+      background: rgba(29,78,216,0.06);
+      color: var(--accent-purple);
+      border: 1px solid rgba(29,78,216,0.1);
+    }
+
+    /* ===== EXPERIENCE TIMELINE ===== */
+    .journey-container {
+      max-width: 780px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .journey-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 31px;
+      width: 3px;
+      background: linear-gradient(to bottom, var(--accent-purple), rgba(29,78,216,0.1));
+      border-radius: 9999px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 70px;
+      margin-bottom: 2.5rem;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 18px;
+      top: 6px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 3px solid var(--accent-purple);
+      z-index: 2;
+      box-shadow: 0 0 0 4px rgba(29,78,216,0.08);
+      transition: all 0.2s ease;
+    }
+
+    .timeline-item:hover .timeline-dot {
+      background: var(--accent-purple);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .timeline-content {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 14px;
+      padding: 1.75rem 2rem;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+    }
+
+    .timeline-item:hover .timeline-content {
+      transform: translateX(4px);
+      border-color: rgba(29,78,216,0.15);
+      box-shadow: var(--shadow-md);
+    }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .timeline-date {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.8rem;
+      background: rgba(29,78,216,0.06);
+      color: var(--accent-purple);
+      border-radius: 9999px;
+      border: 1px solid rgba(29,78,216,0.1);
+    }
+
+    .timeline-content h3 { font-size: 1.1rem; color: var(--text-primary); font-weight: 700; }
+    .timeline-subtitle { font-size: 0.9rem; color: var(--accent-purple); margin-bottom: 0.5rem; font-weight: 500; }
+    .timeline-content p { font-size: 0.9rem; line-height: 1.65; color: var(--text-secondary); }
+
+    /* ===== SKILLS ===== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.75rem;
+      margin-top: 0;
+    }
+
+    .skills-card {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      padding: 2.25rem;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .skills-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--gradient-brand);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .skills-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .skills-card:hover::before { opacity: 1; }
+
+    .skills-icon { font-size: 1.8rem; margin-bottom: 1.25rem; display: block; }
+    .skills-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 1.25rem; color: var(--text-primary); }
+
+    .pill-list { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+
+    .pill {
+      font-size: 0.82rem;
+      font-weight: 500;
+      padding: 0.38rem 0.95rem;
+      border-radius: 9999px;
+      background: #f8fafc;
+      border: 1px solid rgba(29,78,216,0.07);
+      color: var(--text-secondary);
+      transition: all 0.15s ease;
+    }
+
+    .pill:hover {
+      background: var(--gradient-brand);
+      color: #ffffff;
+      border-color: transparent;
+      transform: translateY(-1px);
+    }
+
+    /* ===== ELEVATOR PITCH VIDEO ===== */
+    .pitch-container {
+      max-width: 900px;
+      margin: 3rem auto 0;
+    }
+
+    .pitch-video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      background: #000000;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border-light);
+    }
+
+    .pitch-video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact-section {
+      background: linear-gradient(160deg, #0f172a 0%, #1e3a8a 100%);
+    }
+
+    .contact-section h2,
+    .contact-section .section-label { color: #ffffff !important; }
+    .contact-section h2::after { background: rgba(255,255,255,0.4); }
+    .contact-section .section-sub { color: rgba(255,255,255,0.7); }
+    .contact-section .section-divider { background: rgba(255,255,255,0.5); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .contact-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 14px;
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      transition: all 0.2s ease;
+    }
+
+    .contact-card:hover {
+      background: rgba(255,255,255,0.12);
+      transform: translateY(-2px);
+    }
+
+    .contact-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(29,78,216,0.4);
+      border: 1px solid rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #93c5fd;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .contact-info-text h4 { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.55); margin-bottom: 0.2rem; }
+    .contact-info-text a, .contact-info-text p { font-size: 0.95rem; font-weight: 600; color: #ffffff; word-break: break-word; }
+
+    .contact-form-container {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px;
+      padding: 2.5rem;
+    }
+
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.25rem; }
+    .form-group label { font-size: 0.85rem; font-weight: 600; color: rgba(255,255,255,0.75); }
+
+    .form-control {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 10px;
+      padding: 0.8rem 1rem;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: #ffffff;
+      transition: all 0.2s ease;
+    }
+
+    .form-control::placeholder { color: rgba(255,255,255,0.35); }
+    .form-control:focus {
+      outline: none;
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(147,197,253,0.5);
+      box-shadow: 0 0 0 3px rgba(29,78,216,0.3);
+    }
+
+    textarea.form-control { resize: vertical; min-height: 130px; }
+
+    /* ===== FOOTER ===== */
+    .site-footer { background: #0a0f1e; border-top: 1px solid rgba(255,255,255,0.06); padding: 3.5rem 0 2rem; }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 3rem; align-items: center; margin-bottom: 2.5rem; }
+    .footer-brand h3 { font-size: 1.35rem; font-weight: 800; color: #ffffff; margin-bottom: 0.5rem; }
+    .footer-brand h3 span { color: #93c5fd; }
+    .footer-brand p { font-size: 0.92rem; color: rgba(255,255,255,0.45); max-width: 380px; }
+    .footer-socials { display: flex; gap: 0.75rem; justify-content: flex-end; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 2rem; color: rgba(255,255,255,0.3); font-size: 0.8rem; flex-wrap: wrap; gap: 0.75rem; }
+
+    /* social link overrides for footer */
+    .social-link-dark {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .social-link-dark:hover {
+      background: var(--accent-purple);
+      border-color: var(--accent-purple);
+      color: #ffffff;
+      transform: translateY(-3px);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .hero-grid { grid-template-columns: 1fr; text-align: center; }
+      .hero-intro { margin: 0 auto 2.5rem; }
+      .hero-actions { justify-content: center; }
+      .hero-stats { justify-content: center; }
+      .hero-image-container { order: -1; }
+      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .resume-wrapper { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .footer-grid { grid-template-columns: 1fr; text-align: center; }
+      .footer-socials { justify-content: center; }
+      .footer-brand p { max-width: 100%; }
+    }
+
+    @media (max-width: 768px) {
+      .about-highlights { grid-template-columns: 1fr; }
+      .hero-image-wrapper { width: 240px; height: 290px; }
+      .contact-form-container { padding: 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="#home" class="nav-logo">
+        Tiobou<span>.</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#pitch">Pitch</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span>&#127314;</span> Available for opportunities
+          </div>
+          <h1 class="hero-name">
+            Tiobou Fofou<br><span class="accent">Milton Raille</span>
+          </h1>
+          <p class="hero-title">Software Engineer &amp; Aspiring Data Engineer &nbsp;·&nbsp; Bamenda, Cameroon</p>
+          <p class="hero-intro">
+            Building technology solutions that improve access to education, employment, and opportunities across Cameroon and Africa. Specialised in Python, Flutter, Django, and data-driven systems.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn--primary">
+              <i class="fa-solid fa-folder-open"></i> View Projects
+            </a>
+            <a href="My_Resume.pdf" download class="btn btn--outline">
+              <i class="fa-solid fa-download"></i> Download Resume
+            </a>
+            <a href="#contact" class="btn btn--outline">
+              <i class="fa-solid fa-envelope"></i> Contact Me
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Years of learning</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Projects built</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">3×</span>
+              <span class="stat-label">Internships</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-image-container">
+          <div class="hero-image-wrapper">
+            <img src="milton_raille.jpg" alt="Professional photo of Tiobou Fofou Milton Raille" class="hero-photo">
+            <div class="hero-status-badge">
+              <span class="status-dot"></span>
+              <span class="status-text">Open to work</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text reveal-element">
+          <span class="section-label">Who I am</span>
+          <h2>About Me</h2>
+          <div class="section-divider"></div>
+          <p>
+            I'm a third-year Software Engineering student at the College of Technology, University of Bamenda, currently deepening my expertise in data engineering through the ALX GCGO track. My academic and practical journey has given me hands-on experience across web development, mobile applications, machine learning, and product design.
+          </p>
+          <p>
+            Through three consecutive internships at Skye8 Technologies, I've grown from building static web pages to architecting cross-platform mobile applications with Flutter and Dart. I'm passionate about turning ideas into products that create real, measurable impact — particularly in education access and workforce development across Africa.
+          </p>
+          <p>
+            My long-term goal is to become a Data Engineer leveraging data systems to help institutions make smarter decisions and connect people with meaningful opportunities.
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <div class="highlight-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div class="highlight-text">
+                <h4>Education</h4>
+                <p>B.Sc. Software Engineering, UBa — 2023–2026</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="highlight-text">
+                <h4>Location</h4>
+                <p>Bamenda, Cameroon</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon"><i class="fa-solid fa-database"></i></div>
+              <div class="highlight-text">
+                <h4>Focus area</h4>
+                <p>Data Engineering &amp; Mobile Dev</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon"><i class="fa-solid fa-globe-africa"></i></div>
+              <div class="highlight-text">
+                <h4>Mission</h4>
+                <p>Tech for Africa's development</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal-element delay-1">
+          <div class="vision-card">
+            <h3>My Vision</h3>
+            <p>
+              "I want to build scalable, data-driven solutions that help institutions make better decisions, connect young Africans with opportunities, and create measurable social impact through technology and innovation."
+            </p>
+            <p>
+              Every project I build is a step toward that mission — from healthcare AI systems to employment-matching platforms designed specifically for emerging economies.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ELEVATOR PITCH ===== -->
+  <section id="pitch" class="section section--alt">
+    <div class="container">
+      <div class="section-header reveal-element" style="text-align:center;">
+        <span class="section-label">Introduction</span>
+        <h2>Watch My Elevator Pitch</h2>
+        <div class="section-divider" style="margin-left:auto; margin-right:auto;"></div>
+        <p class="section-sub" style="margin:0 auto;">A short video introduction about who I am, what I do, and the impact I aim to create through technology.</p>
+      </div>
+
+      <div class="pitch-container reveal-element delay-1">
+        <div class="pitch-video-wrapper">
+          <iframe src="https://drive.google.com/file/d/1udA5Ew6fAA4dIgXXnUFqz6MMJs5l7n7M/preview" allow="autoplay" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-header reveal-element">
+        <span class="section-label">Career journey</span>
+        <h2>Experience</h2>
+        <div class="section-divider"></div>
+        <p class="section-sub">Three internships at a Cameroonian software company, each building on the last.</p>
+      </div>
+
+      <div class="journey-container">
+        <div class="timeline-item reveal-element">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Mobile Application Development Intern</h3>
+                <p class="timeline-subtitle">Skye8 Technologies, Cameroon</p>
+              </div>
+              <span class="timeline-date">Jun – Aug 2025</span>
+            </div>
+            <p>Developed cross-platform mobile applications using Flutter and Dart. Implemented responsive UIs and reusable components. Applied Git &amp; GitHub for version control and collaborative workflows, and strengthened understanding of modern mobile deployment practices.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-element delay-1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Frontend Development Intern</h3>
+                <p class="timeline-subtitle">Skye8 Technologies, Cameroon</p>
+              </div>
+              <span class="timeline-date">Jun – Aug 2024</span>
+            </div>
+            <p>Developed interactive web interfaces using HTML, CSS, and JavaScript. Participated in collaborative development projects, improved communication and presentation skills through pitch sessions, and applied problem-solving to real-world frontend challenges.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-element delay-2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Software Development Intern (Frontend Foundations)</h3>
+                <p class="timeline-subtitle">Skye8 Technologies, Cameroon</p>
+              </div>
+              <span class="timeline-date">Jun – Jul 2023</span>
+            </div>
+            <p>Learned modern web development fundamentals with HTML and CSS. Built responsive static web pages and collaborated with senior developers to understand industry-standard workflows and UI design principles.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-element delay-3">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>B.Sc. Software Engineering</h3>
+                <p class="timeline-subtitle">College of Technology, University of Bamenda</p>
+              </div>
+              <span class="timeline-date">2023 – 2026</span>
+            </div>
+            <p>Relevant coursework: Software Engineering, Database Systems, Data Structures &amp; Algorithms, Web Development, Mobile Application Development, Artificial Intelligence, and Systems Analysis &amp; Design.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header reveal-element">
+        <span class="section-label">What I've built</span>
+        <h2>Featured Projects</h2>
+        <div class="section-divider"></div>
+        <p class="section-sub">A selection of projects spanning AI, mobile, data, and product design — all built to solve real problems.</p>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card reveal-element">
+          <div class="project-tech-art p1">🏥</div>
+          <div class="project-body">
+            <h3>AI-Powered Healthcare Consultation System</h3>
+            <div class="project-outcome"><i class="fa-solid fa-circle-check"></i> Disease prediction with Random Forest ML</div>
+            <p class="project-text">Built a healthcare consultation platform that analyses symptoms and predicts probable diseases. Implemented Random Forest algorithms for disease prediction and personalised healthcare recommendations. Designed backend architecture using Django.</p>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Django</span>
+              <span class="project-tag">Machine Learning</span>
+              <span class="project-tag">Random Forest</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-element delay-1">
+          <div class="project-tech-art p2">📈</div>
+          <div class="project-body">
+            <h3>Automated Forex Trading Bot</h3>
+            <div class="project-outcome"><i class="fa-solid fa-circle-check"></i> Live multi-pair execution with ATR risk management</div>
+            <p class="project-text">Built a multi-pair algorithmic trading system with automatic trade execution. Implemented EMA, RSI, ADX, and MACD technical indicators. Developed ATR-based risk management, dynamic position sizing, and backtesting capabilities.</p>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">MetaTrader 5</span>
+              <span class="project-tag">Pandas</span>
+              <span class="project-tag">NumPy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-element delay-2">
+          <div class="project-tech-art p3">🌤️</div>
+          <div class="project-body">
+            <h3>Weather Forecast Application</h3>
+            <div class="project-outcome"><i class="fa-solid fa-circle-check"></i> Real-time localised forecasts via API integration</div>
+            <p class="project-text">Developed a weather forecasting application delivering real-time weather information. Integrated location-based services to provide localised forecasts, displaying current conditions and future weather predictions through a user-friendly interface.</p>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">REST APIs</span>
+              <span class="project-tag">Location Services</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-element">
+          <div class="project-tech-art p4">🤝</div>
+          <div class="project-body">
+            <h3>AI-Powered Employment Matching Platform</h3>
+            <div class="project-outcome"><i class="fa-solid fa-circle-check"></i> Prototype presented to stakeholders — ALX Team Project</div>
+            <p class="project-text">Collaborated with a multidisciplinary team to design a technology-driven platform bridging youth skills and employer requirements across Sub-Saharan Africa. Conducted user research, mapped pain points, and supported prototype development.</p>
+            <div class="project-tags">
+              <span class="project-tag">Figma</span>
+              <span class="project-tag">User Research</span>
+              <span class="project-tag">Product Design</span>
+              <span class="project-tag">Design Thinking</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-element delay-1">
+          <div class="project-tech-art p5">📱</div>
+          <div class="project-body">
+            <h3>Cross-Platform Mobile App (Flutter)</h3>
+            <div class="project-outcome"><i class="fa-solid fa-circle-check"></i> Deployed via Skye8 Technologies internship</div>
+            <p class="project-text">Developed production-grade mobile application using Flutter and Dart during internship. Implemented responsive UIs, reusable components, and applied Git-based collaborative development workflows alongside senior engineering mentors.</p>
+            <div class="project-tags">
+              <span class="project-tag">Flutter</span>
+              <span class="project-tag">Dart</span>
+              <span class="project-tag">Git</span>
+              <span class="project-tag">GitHub</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section section--alt">
+    <div class="container">
+      <div class="section-header reveal-element">
+        <span class="section-label">Technical toolkit</span>
+        <h2>Core Competencies</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skills-card reveal-element">
+          <span class="skills-icon">💻</span>
+          <h3>Programming Languages</h3>
+          <div class="pill-list">
+            <span class="pill">Python</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">SQL</span>
+            <span class="pill">Dart</span>
+            <span class="pill">HTML5</span>
+            <span class="pill">CSS3</span>
+          </div>
+        </div>
+
+        <div class="skills-card reveal-element delay-1">
+          <span class="skills-icon">🛠️</span>
+          <h3>Frameworks &amp; Technologies</h3>
+          <div class="pill-list">
+            <span class="pill">Django</span>
+            <span class="pill">Flutter</span>
+            <span class="pill">Pandas</span>
+            <span class="pill">NumPy</span>
+            <span class="pill">REST APIs</span>
+            <span class="pill">MetaTrader 5</span>
+          </div>
+        </div>
+
+        <div class="skills-card reveal-element delay-2">
+          <span class="skills-icon">📊</span>
+          <h3>Data &amp; Analytics</h3>
+          <div class="pill-list">
+            <span class="pill">Data Analysis</span>
+            <span class="pill">Data Visualisation</span>
+            <span class="pill">Machine Learning</span>
+            <span class="pill">SQL Databases</span>
+            <span class="pill">Data Cleaning</span>
+            <span class="pill">Research Methods</span>
+          </div>
+        </div>
+
+        <div class="skills-card reveal-element">
+          <span class="skills-icon">🎨</span>
+          <h3>Tools &amp; Design</h3>
+          <div class="pill-list">
+            <span class="pill">Git &amp; GitHub</span>
+            <span class="pill">VS Code</span>
+            <span class="pill">Figma</span>
+            <span class="pill">Google Workspace</span>
+          </div>
+        </div>
+
+        <div class="skills-card reveal-element delay-1">
+          <span class="skills-icon">🤝</span>
+          <h3>Professional Skills</h3>
+          <div class="pill-list">
+            <span class="pill">Problem Solving</span>
+            <span class="pill">Team Collaboration</span>
+            <span class="pill">Communication</span>
+            <span class="pill">Presentation &amp; Pitching</span>
+            <span class="pill">Product Development</span>
+            <span class="pill">Project Planning</span>
+          </div>
+        </div>
+
+        <div class="skills-card reveal-element delay-2">
+          <span class="skills-icon">🌍</span>
+          <h3>Currently Learning</h3>
+          <div class="pill-list">
+            <span class="pill">Apache Kafka</span>
+            <span class="pill">Apache Spark</span>
+            <span class="pill">Cloud Pipelines</span>
+            <span class="pill">Data Engineering</span>
+            <span class="pill">ALX GCGO Track</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESUME ===== -->
+  <section id="resume" class="section">
+    <div class="container">
+      <div class="section-header reveal-element">
+        <span class="section-label">My credentials</span>
+        <h2>Resume</h2>
+        <div class="section-divider"></div>
+        <p class="section-sub">Download or preview my full resume below.</p>
+      </div>
+
+      <div class="resume-wrapper reveal-element">
+        <div class="resume-cta-panel">
+          <div class="resume-cta-icon"><i class="fa-solid fa-file-pdf"></i></div>
+          <h3>Tiobou Fofou Milton Raille</h3>
+          <p>Software Engineer &amp; Aspiring Data Engineer · Bamenda, Cameroon</p>
+          <a href="My_Resume.pdf" download class="btn btn--primary" style="width:100%; margin-bottom:1rem;">
+            <i class="fa-solid fa-download"></i> Download PDF
+          </a>
+          <a href="My_Resume.pdf" target="_blank" class="btn btn--outline" style="width:100%;">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Open in New Tab
+          </a>
+          <div style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--border-light); text-align:left;">
+            <p style="font-size:0.8rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-muted); margin-bottom:0.75rem;">Also find me on</p>
+            <div style="display:flex; flex-direction:column; gap:0.6rem;">
+              <a href="https://github.com/Thecode9" target="_blank" style="display:flex;align-items:center;gap:0.6rem;color:var(--text-secondary);font-size:0.9rem;font-weight:500;">
+                <i class="fa-brands fa-github" style="width:18px;color:var(--accent-purple);"></i> github.com/Thecode9
+              </a>
+              <a href="https://www.linkedin.com/in/tiobou-raille-580a83286" target="_blank" style="display:flex;align-items:center;gap:0.6rem;color:var(--text-secondary);font-size:0.9rem;font-weight:500;">
+                <i class="fa-brands fa-linkedin" style="width:18px;color:var(--accent-purple);"></i> LinkedIn Profile
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-embed">
+          <embed src="My_Resume.pdf" type="application/pdf" width="100%" height="650">
+          <noscript>
+            <p style="padding:2rem;text-align:center;">
+              <a href="My_Resume.pdf" download>Download the PDF</a> to view the resume.
+            </p>
+          </noscript>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header reveal-element" style="text-align:center;">
+        <span class="section-label" style="color:rgba(255,255,255,0.6);">Get in touch</span>
+        <h2 style="color:#ffffff;">Let's Work Together</h2>
+        <div class="section-divider" style="margin:0.75rem auto 1rem; background:rgba(255,255,255,0.4);"></div>
+        <p class="section-sub" style="margin:0 auto;">Open to collaborations, internships, and opportunities focused on meaningful tech impact.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-details reveal-element">
+          <div class="contact-card">
+            <div class="contact-icon-box"><i class="fa-solid fa-envelope"></i></div>
+            <div class="contact-info-text">
+              <h4>Email</h4>
+              <a href="mailto:tiobouraille20@gmail.com">tiobouraille20@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon-box"><i class="fa-brands fa-linkedin"></i></div>
+            <div class="contact-info-text">
+              <h4>LinkedIn</h4>
+              <a href="https://www.linkedin.com/in/tiobou-raille-580a83286" target="_blank">tiobou-raille-580a83286</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon-box"><i class="fa-brands fa-github"></i></div>
+            <div class="contact-info-text">
+              <h4>GitHub</h4>
+              <a href="https://github.com/Thecode9" target="_blank">github.com/Thecode9</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon-box"><i class="fa-solid fa-phone"></i></div>
+            <div class="contact-info-text">
+              <h4>Phone / WhatsApp</h4>
+              <p>+237 671 220 651</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-container reveal-element delay-1">
+          <h3 style="font-size:1.3rem;color:#ffffff;margin-bottom:1.5rem;">Send a Message</h3>
+          <form id="portfolioContactForm">
+            <div class="form-group">
+              <label for="contactName">Your Name</label>
+              <input type="text" id="contactName" class="form-control" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email Address</label>
+              <input type="email" id="contactEmail" class="form-control" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Message</label>
+              <textarea id="contactMessage" class="form-control" placeholder="I'd like to discuss..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary" style="width:100%; margin-top:0.5rem;">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Tiobou Fofou <span>Milton Raille</span></h3>
+          <p>Software Engineer &amp; Aspiring Data Engineer building impactful technology solutions for Africa.</p>
+        </div>
+        <div class="footer-socials">
+          <a href="https://github.com/Thecode9" target="_blank" class="social-link-dark" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/tiobou-raille-580a83286" target="_blank" class="social-link-dark" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:tiobouraille20@gmail.com" class="social-link-dark" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Tiobou Fofou Milton Raille &nbsp;·&nbsp; All rights reserved</span>
+        <span>Built with care &nbsp;·&nbsp; Bamenda, Cameroon</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" aria-label="Back to top">&#8679;</button>
+
+  <!-- Success Modal -->
+  <div class="modal-overlay" id="successModal" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <div class="modal-icon"><i class="fa-solid fa-check"></i></div>
+      <h3>Message Sent!</h3>
+      <p>Thank you for reaching out. I'll get back to you as soon as possible.</p>
+      <button class="btn btn--primary" id="closeModalBtn" style="width:100%;">Close</button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
